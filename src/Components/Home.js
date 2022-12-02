@@ -1,45 +1,74 @@
-import React from "react"
+import React, { useState } from "react"
 import "./main.css"
-import Logo from "../images/cjbox.svg"
-import {Row, Col} from "reactstrap"
-import jQuery, {$} from "jquery"
+
+import { MoonIcon, SunIcon, TriangleDownIcon} from "@primer/octicons-react"
+import DarkLogo from "../images/logoDark.svg"
+import LightLogo from "../images/logoLight.svg"
+import Welcome from "./Welcome"
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import About from "./About"
+import Contact from "./Contact"
+import Projects from "./Projects"
+
+const WELCOME = "Welcome"
+const ABOUT = "About"
+const CONTACT = "Contact"
+const PROJECTS = "Projects"
 
 const Home = () => {
+    const [lightMode, setLightMode] = useState(true)
+    const [shown, setShown] = useState(CONTACT)
 
-    jQuery(document).ready(function(){
-        $('h1').mousemove(function(e){
-          var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
-          var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
-          $('h1').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(227,6,19,.8), '+rYP/8+'px '+rXP/60+'px rgba(255,237,0,1), '+rXP/70+'px '+rYP/12+'px rgba(0,159,227,.7)');
-        });
-     });
+
+    const handleChange = (screen, direction) => {
+    const screens = [WELCOME, PROJECTS, ABOUT, CONTACT]
+
+        const match = (el) => el === screen
+        const foundForward = screens.findIndex(match) + 1 
+        const newScreen = screens[foundForward]
+        setShown(newScreen)
+
+        // const nextScreen = direction === "down" ? screens[foundForward] : screens[foundBackward]
+        console.log("FOUND", screens, foundForward)
+        // setShown(nextScreen)
+    }
+
+
 
     return(
-        <div className="home">
-            <Row>
-                <Col md="2">
-                    <div>
-                    <div className="logoBox d-flex">
-                            <img src={Logo} className="mainLogo" alt="logo" />
-                      <h1 className="tagLine">
-                        Courtney Jones
-                        <br/>
-                         <span className="subText">UX Front-End Developer</span>
-                      </h1>
+    
+        <div className={lightMode ? "home lightTheme" : "home darkTheme"}>
+            <div className={lightMode ? "header lightHeader" : "header darkHeader"} >
+                <div className="logoBox" onClick={() =>  setShown(WELCOME)}>
+                   {!lightMode && <img src={LightLogo} className="mainLogo" alt="logo" />}
+                   {lightMode && <img src={DarkLogo} className="mainLogo" alt="logo" />}
+                </div>
+                <div className={lightMode ? "navs lightNavs" : "navs darkNavs"}>
+                    <div onClick={() => setShown(PROJECTS)} className="navItem">Projects |</div> 
+                    <div onClick={() => setShown(ABOUT)} className="navItem">About |</div> 
+                    <div onClick={() => setShown(CONTACT)}  className="navItem"> Contact </div> 
+                </div>
+                <div>
+                {!lightMode && <span onClick={() => setLightMode(!lightMode)}><SunIcon size={24} className="sun" /></span>}
+                {lightMode && <span onClick={() => setLightMode(!lightMode)}><MoonIcon size={24} className="moon" /></span>}
+                </div>
+            </div>
+            
+            <div className="welcome">
+                <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
+                    {shown === WELCOME && <Welcome/>}
+                    {shown === PROJECTS && <Projects/>}
+                    {shown === ABOUT && <About/>}
+                    {shown === CONTACT && <Contact/>}
+                    <div className="downArrow" onClick={() => handleChange(shown, "down")}>
+                        <TriangleDownIcon size={64} className="down"/>
                     </div>
-                    </div>   
-                </Col>
-                {/* <Col md="4"></Col>
-                <Col md="5"></Col> */}
-            </Row>
-            <Row>
-                {/* <Col md="6">
-                    <div>About</div>
-                    <div>Projects</div>
-                    <div>Contact</div>
-                </Col> */}
-            </Row>
+                </div> 
+                
+            </div>
+            
         </div>
+        
     )
 }
 

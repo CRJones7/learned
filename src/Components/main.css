@@ -1,28 +1,217 @@
 .home{
     height: 100vh;
-    width: 100vw;
-    background-color: #F5F5F5;
+    width: 100%;
+    /* overflow-x:hidden; */
+    /* background-color: #f5f5f5; */
     font-family: 'Courier New', Courier, monospace;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background 0.5s ease-in 0.1s;
+    transition: border 0.5s color 0.1s;
+    transition: color 0.5s ease-in 0.1s;
+    position: fixed;
 }
-.logoBox{
-    padding: 30px;
-    margin: auto;
+.lightTheme{
+    /* background: repeating-linear-gradient(
+  180deg,
+  #94c8a6,
+  #94c8a6 20px,
+  #acc8b6 20px,
+  #acc8b6 25px
+); */
+    background-color:  #94c8a6;
+    border-top: 3px solid #092a3a;
+    border-bottom: 3px solid #092a3a;
+    color: #092a3a;
+}
+.darkTheme{
+    /* background: repeating-linear-gradient(
+        180deg,
+        #051821,
+        #051821 20px,
+        #092a3a 20px,
+        #092a3a 25px
+      ); */
+    /* background-color: #051821; */
+    background-color: #092a3a;
+    border-top: 3px solid #94c8a6;
+    color:#94c8a6;
+}
+
+.header{
+    width: inherit;
+    transition: box-shadow 0.3s ease-in 0.1s;
+    transition: background 0.3s ease-in 0.1s;
     display: flex;
-    flex-direction: row;
-    height: 20%;
-    /* background-color: aqua; */
-    /* width: 30%; */
+    justify-content: space-between;
+    position: fixed;
+
 }
-.tagLine{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 15px;
-    font-size: 30px;
-    font-weight: 500;
+.lightHeader{
+    background-color:  #94c8a600;
+    box-shadow: 0px 0px 20px #00000042;
 }
-.subText{
-    font-size: 15px;    
+.darkHeader{ 
+    background-color: #092a3a00;
+    box-shadow: 0px 0px 20px #0000006e;
 }
+
+.moon{
+    color: #092a3a;
+    margin-right: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.sun{
+    color: #94c8a6;
+    margin-right: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+/* .logoBox{
+    display: flex;
+} */
 .mainLogo{
-    /* margin: auto; */
+    margin: auto;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+     margin-right: 10px;
 }
+
+.navs{
+    display: flex;
+    transition: color 0.5s color 0.1s;
+    font-size: 20px;
+}
+.lightNavs{
+    color: #092a3a;
+}
+.darkNavs{
+    color: #94c8a6;
+}
+.navItem{
+    margin: auto 5px auto 5px;
+    cursor: pointer;
+}
+.navItem:hover{
+    text-shadow: 1px 1px;
+}
+.welcome{
+height: 100vh;
+margin: auto 2px auto 2px;
+}
+
+.welcomeText{
+   display: flex;
+   flex-direction: column;
+   width: 85%;
+   height: 80%;
+   max-height: 80%;
+   overflow: scroll;
+   margin: auto;
+   margin-top: 90px;
+   transition: box-shadow 0.5s ease-in 0.1s;
+   border-radius: 5px;
+   padding: 20px;
+}
+.lightWelcome{
+    box-shadow: inset 0px 0px 20px #00000042;
+}
+.darkWelcome{
+    box-shadow: inset 0px 0px 20px #0000006e
+}
+
+.photoContainer{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+.photo{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    transition: border 0.5s ease-in 0.1s;
+    margin: auto;
+}
+.lightPhoto{
+    /* border: 4px dashed #092a3a; */
+    box-shadow: 0px 0px 20px #00000042;
+}
+.darkPhoto{
+    /* border: 4px dashed #94c8a6; */
+    box-shadow: 20px 1px 50px #0000006e;
+}
+
+.greeting{
+    /* font-size: 40px; */
+    font-weight: 900;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    /* box-shadow: 10px 0px 20px #0000006e; */
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.link{
+    margin: 12px 5px 12px 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.link:hover{
+    text-shadow: 1px 1px;
+}
+.downArrow{
+    margin: auto;
+    
+    
+}
+.downArrow{
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.contact{
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.contactTag{
+    background-color: #092a3a5c;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 20px #00000042;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.info{
+    font-weight: 800;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.email{
+    max-width: 100%;
+    cursor: pointer;
+    word-wrap:break-word;
+}
+
+
+    /* animation: bounce 2s linear 0.5 infinite normal forwards; */
+    
+
+
