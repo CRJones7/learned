@@ -5,7 +5,6 @@ import { MoonIcon, SunIcon, TriangleDownIcon} from "@primer/octicons-react"
 import DarkLogo from "../images/logoDark.svg"
 import LightLogo from "../images/logoLight.svg"
 import Welcome from "./Welcome"
-import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import About from "./About"
 import Contact from "./Contact"
 import Projects from "./Projects"
@@ -17,7 +16,7 @@ const PROJECTS = "Projects"
 
 const Home = () => {
     const [lightMode, setLightMode] = useState(true)
-    const [shown, setShown] = useState(CONTACT)
+    const [shown, setShown] = useState(WELCOME)
 
 
     const handleChange = (screen, direction) => {
@@ -25,12 +24,10 @@ const Home = () => {
 
         const match = (el) => el === screen
         const foundForward = screens.findIndex(match) + 1 
-        const newScreen = screens[foundForward]
-        setShown(newScreen)
+        const foundClean = foundForward <= 3 ? foundForward : 0 
+        const newScreen = screens[foundClean]
 
-        // const nextScreen = direction === "down" ? screens[foundForward] : screens[foundBackward]
-        console.log("FOUND", screens, foundForward)
-        // setShown(nextScreen)
+        setShown(newScreen)
     }
 
 
@@ -56,12 +53,12 @@ const Home = () => {
             
             <div className="welcome">
                 <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
-                    {shown === WELCOME && <Welcome/>}
-                    {shown === PROJECTS && <Projects/>}
-                    {shown === ABOUT && <About/>}
-                    {shown === CONTACT && <Contact/>}
-                    <div className="downArrow" onClick={() => handleChange(shown, "down")}>
-                        <TriangleDownIcon size={64} className="down"/>
+                    {shown === WELCOME && <Welcome lightMode={lightMode}/>}
+                    {shown === PROJECTS && <Projects lightMode={lightMode}/>}
+                    {shown === ABOUT && <About lightMode={lightMode}/>}
+                    {shown === CONTACT && <Contact lightMode={lightMode}/>}
+                    <div className="downArrow down-bounce" onClick={() => handleChange(shown, "down")}>
+                        <TriangleDownIcon size={64} className="down "/>
                     </div>
                 </div> 
                 

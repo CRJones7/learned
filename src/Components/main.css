@@ -1,12 +1,10 @@
 .home{
     height: 100vh;
     width: 100%;
-    /* overflow-x:hidden; */
-    /* background-color: #f5f5f5; */
     font-family: 'Courier New', Courier, monospace;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: background 0.5s ease-in 0.1s;
-    transition: border 0.5s color 0.1s;
+    transition: background-color 0.5s ease-in 0.1s;
+    transition: border 0.5s ease-in 0.1s;
     transition: color 0.5s ease-in 0.1s;
     position: fixed;
 }
@@ -67,9 +65,7 @@
     margin-top: 15px;
     cursor: pointer;
 }
-/* .logoBox{
-    display: flex;
-} */
+
 .mainLogo{
     margin: auto;
     height: 40px;
@@ -135,22 +131,18 @@ margin: auto 2px auto 2px;
     margin: auto;
 }
 .lightPhoto{
-    /* border: 4px dashed #092a3a; */
     box-shadow: 0px 0px 20px #00000042;
 }
 .darkPhoto{
-    /* border: 4px dashed #94c8a6; */
     box-shadow: 20px 1px 50px #0000006e;
 }
 
 .greeting{
-    /* font-size: 40px; */
     font-weight: 900;
     width: 75%;
     margin: auto;
     padding: 10px;
     text-align: center;
-    /* box-shadow: 10px 0px 20px #0000006e; */
 }
 
 .links{
@@ -169,18 +161,21 @@ margin: auto 2px auto 2px;
 }
 .downArrow{
     margin: auto;
-    
-    
-}
-.downArrow{
-    animation-name: bounce;
     animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0.5s;
-    animation-iteration-count: 5;
-    animation-direction: alternate;
-    animation-fill-mode: both;
+    animation-iteration-count: 3;
 }
+
+.down-bounce{
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
 
 .contact{
     margin: auto;
@@ -190,13 +185,14 @@ margin: auto 2px auto 2px;
     width: 50%;
 }
 .contactTag{
-    background-color: #092a3a5c;
+    
     width: fit-content;
     padding: 5px 15px;
     border-radius: 1px;
     box-shadow: 0px 0px 20px #00000042;
     font-weight: 600;
     text-transform: uppercase;
+    transition: background 0.5s ease-in 0.1s;
 
 }
 .info{
@@ -210,6 +206,76 @@ margin: auto 2px auto 2px;
     word-wrap:break-word;
 }
 
+.aboutMe{
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #00000042;
+    width: 60%;
+    margin: auto;
+    padding: 17px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    transition: background 0.5s ease-in 0.1s;
+}
+
+.tagLight{
+    background-color: #092a3a5c;
+}
+.tagDark{
+    background-color:  #94c8a64c;
+}
+
+
+.projectsTitle{
+    margin: auto;
+    font-size: 25px;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #00000042;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background 0.5s ease-in 0.1s;
+}
+
+.projectBlock{
+    width: 95%;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    
+}
+.projectGif{
+    width: 45%;
+  
+}
+.project{
+    box-shadow: 0px 0px 20px #00000042;
+    border-radius: 5px;
+    margin: 20px;
+   
+}
+@media only screen and (max-width: 1189px){
+    .projectBlock{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .projectGif{
+        width: 100%;
+    }
+}
+.comingSoon{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-style: oblique;
+    margin: 30px 0px 30px 0px
+}
 
     /* animation: bounce 2s linear 0.5 infinite normal forwards; */
     
