@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/learned/static/css/main.6befc84a.css",
+    "main.js": "/learned/static/js/main.da50a817.js",
+    "static/js/787.6761af09.chunk.js": "/learned/static/js/787.6761af09.chunk.js",
+    "static/media/Formulary.gif": "/learned/static/media/Formulary.906a06c7d8077dfa9689.gif",
+    "static/media/patientChart.gif": "/learned/static/media/patientChart.9d5743f8a2fade6001eb.gif",
+    "static/media/overview2.gif": "/learned/static/media/overview2.b582b20152ce08379002.gif",
+    "static/media/Charts.gif": "/learned/static/media/Charts.a04bf59effb2055c2515.gif",
+    "static/media/mePhoto.jpeg": "/learned/static/media/mePhoto.b637a9095c75a1663ffd.jpeg",
+    "static/media/CJones_Resume.pdf": "/learned/static/media/CJones_Resume.2cda2325797a4bcac947.pdf",
+    "static/media/logoLight.svg": "/learned/static/media/logoLight.1b728a065529f857a9a23f9f21c1d4d2.svg",
+    "static/media/logoDark.svg": "/learned/static/media/logoDark.6248805730c784a4f7123c98641ad774.svg",
+    "index.html": "/learned/index.html",
+    "main.6befc84a.css.map": "/learned/static/css/main.6befc84a.css.map",
+    "main.da50a817.js.map": "/learned/static/js/main.da50a817.js.map",
+    "787.6761af09.chunk.js.map": "/learned/static/js/787.6761af09.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6befc84a.css",
+    "static/js/main.da50a817.js"
+  ]
+}
