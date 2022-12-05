@@ -1,5 +1,5 @@
 import React from 'react'
-import "./main.css"
+import "../main.css"
 import Charts from "../files/Charts.gif"
 import Formulary from "../files/Formulary.gif"
 import Overview from "../files/overview2.gif"

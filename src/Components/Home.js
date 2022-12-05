@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./main.css"
+import "../main.css"
 
 import { MoonIcon, SunIcon, TriangleDownIcon} from "@primer/octicons-react"
 import DarkLogo from "../images/logoDark.svg"
