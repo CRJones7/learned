@@ -121,6 +121,7 @@ margin: auto 2px auto 2px;
     display: flex;
     width: 50%;
     margin: auto;
+    margin-bottom: 5px;
     justify-content: center;
 }
 .photo{
@@ -162,7 +163,7 @@ margin: auto 2px auto 2px;
 .downArrow{
     margin: auto;
     animation-duration: 2s;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
 }
 
 .down-bounce{
@@ -201,9 +202,12 @@ margin: auto 2px auto 2px;
     padding-right: 5px;
 }
 .email{
-    max-width: 100%;
+    width: fit-content;
     cursor: pointer;
     word-wrap:break-word;
+}
+.phone{
+    width: fit-content;
 }
 
 .aboutMe{
@@ -229,6 +233,7 @@ margin: auto 2px auto 2px;
 
 .projectsTitle{
     margin: auto;
+    margin-bottom: 5px;
     font-size: 25px;
     width: fit-content;
     padding: 5px 15px;
@@ -243,8 +248,12 @@ margin: auto 2px auto 2px;
     width: 95%;
     display: flex;
     align-self: center;
+    flex-direction: row;
     justify-content: space-evenly;
     
+}
+.imgContainer{
+    width: 45%;
 }
 .projectGif{
     width: 45%;
@@ -256,7 +265,26 @@ margin: auto 2px auto 2px;
     margin: 20px;
    
 }
+.comingSoon{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-style: oblique;
+    margin: 30px 0px 30px 0px
+}
 @media only screen and (max-width: 1189px){
+    .aboutMe{
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px #00000042;
+        width: 80%;
+        margin: auto;
+        padding: 17px;
+        font-size: 15px;
+        font-weight: 500;
+        display: flex;
+        text-align: center;
+        transition: background 0.5s ease-in 0.1s;
+    }
     .projectBlock{
         width: 95%;
         display: flex;
@@ -268,13 +296,34 @@ margin: auto 2px auto 2px;
     .projectGif{
         width: 100%;
     }
+    .info{
+        font-weight: 500;
+        padding-top: 5px;
+        padding-right: 0px;
+        font-size: 20px;
+    }
+    .comingSoon{
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-style: oblique;
+        margin: 15px 0px 15px 0px
+    }
 }
-.comingSoon{
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(216, 216, 216, 0.7);
+    padding: 24px;
+    z-index: 50;
+    height: 100%;
     width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-style: oblique;
-    margin: 30px 0px 30px 0px
-}
+    cursor: zoom-in;
+  }
+
     
 

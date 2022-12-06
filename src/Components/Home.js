@@ -15,7 +15,7 @@ const CONTACT = "Contact"
 const PROJECTS = "Projects"
 
 const Home = () => {
-    const [lightMode, setLightMode] = useState(true)
+    const [lightMode, setLightMode] = useState(false)
     const [shown, setShown] = useState(WELCOME)
 
 

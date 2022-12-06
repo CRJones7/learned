@@ -12,10 +12,10 @@ const Welcome = ({lightMode}) => {
         <>
                     <div className="greeting"></div>
                     <div className="greeting">
-                        <h3 style={{fontSize: "40px", margin: 0}}>Hi I'm</h3>
+                        <h3 style={{fontSize: "40px", margin: 0}}>Hi! I'm</h3>
                         <h4 style={{fontSize: "40px", margin: 0}}>Courtney</h4>
-                        <p style={{fontSize: "20px"}}>UX Front-End Developer</p>
-                        <p style={{fontSize: "11px", paddingBottom: "10px"}}>~ Professional Problem Solver ~</p>
+                        <p style={{fontSize: "25px"}}>The Front-End Developer</p>
+                        <p style={{fontSize: "11px", paddingBottom: "10px"}}>~ And Pretty Cool Human ~</p>
                     </div>
                     <div className="links">
                     <div className="link" onClick={() => openLink("https://github.com/CRJones7")}>GH</div>
