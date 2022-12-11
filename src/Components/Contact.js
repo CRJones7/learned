@@ -27,10 +27,10 @@ const Contact = ({lightMode}) => {
                 </h1>
            
             </div>
-            <div className="links">
-                    <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://github.com/CRJones7")}>GH</div>
-                    <div className="link" onClick={() => openLink("https://www.linkedin.com/in/courtney-jones-458362b3/")} >LI</div>
-                    <div className="link" onClick={() => openLink(Resume)}>RE</div>
+            <div className={lightMode ?  "links tagLight": "links tagDark"}>
+                    <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://github.com/CRJones7")}>GitHub</div>
+                    <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://www.linkedin.com/in/courtney-jones-458362b3/")} >LinkedIn</div>
+                    <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink(Resume)}>Resume</div>
                     </div>
         </>
     )

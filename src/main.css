@@ -153,12 +153,17 @@ margin: auto 2px auto 2px;
     margin: auto;
     width: fit-content;
     text-align: left;
+    transition: background 0.5s ease-in 0.1s;
+    border-radius: 3px;
 }
 .link{
+    padding: 5px;
     margin: 12px 5px 12px 5px;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+    border-radius: 3px;
+    /* transition: background 0.5s ease-in 0.1s; */
 }
 .link:hover{
     text-shadow: 1px 1px;
