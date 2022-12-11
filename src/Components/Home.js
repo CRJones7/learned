@@ -60,8 +60,23 @@ const Home = () => {
                     <div className="downArrow down-bounce" onClick={() => handleChange(shown, "down")}>
                         <TriangleDownIcon size={64} className="down "/>
                     </div>
+                     {/* <Welcome lightMode={lightMode}/>
+                     <Projects lightMode={lightMode}/> 
+                   <About lightMode={lightMode}/>
+                     <Contact lightMode={lightMode}/>
+                     <div className="downArrow down-bounce" onClick={() => handleChange(shown, "down")}>
+                        <TriangleDownIcon size={64} className="down "/>
+                    </div> */}
                 </div> 
-                
+                {/* <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
+                <Projects lightMode={lightMode}/>
+                </div>
+                <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
+                <About lightMode={lightMode}/>
+                </div>
+                <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
+                <Contact lightMode={lightMode}/>
+                </div> */}
             </div>
             
         </div>

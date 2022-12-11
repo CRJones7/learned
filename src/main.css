@@ -1,35 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 .home{
     height: 100vh;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Oswald";
+    /* font-family: 'Courier New', Courier, monospace;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     transition: background-color 0.5s ease-in 0.1s;
     transition: border 0.5s ease-in 0.1s;
     transition: color 0.5s ease-in 0.1s;
     position: fixed;
 }
 .lightTheme{
-    /* background: repeating-linear-gradient(
-  180deg,
-  #94c8a6,
-  #94c8a6 20px,
-  #acc8b6 20px,
-  #acc8b6 25px
-); */
     background-color:  #94c8a6;
     border-top: 3px solid #092a3a;
     border-bottom: 3px solid #092a3a;
     color: #092a3a;
 }
 .darkTheme{
-    /* background: repeating-linear-gradient(
-        180deg,
-        #051821,
-        #051821 20px,
-        #092a3a 20px,
-        #092a3a 25px
-      ); */
-    /* background-color: #051821; */
     background-color: #092a3a;
     border-top: 3px solid #94c8a6;
     color:#94c8a6;
@@ -94,6 +82,7 @@
 }
 .welcome{
 height: 100vh;
+overflow: scroll;
 margin: auto 2px auto 2px;
 }
 
@@ -110,11 +99,16 @@ margin: auto 2px auto 2px;
    border-radius: 5px;
    padding: 20px;
 }
+.section{
+    height: 100vh;
+}
 .lightWelcome{
     box-shadow: inset 0px 0px 20px #00000042;
+  
 }
 .darkWelcome{
-    box-shadow: inset 0px 0px 20px #0000006e
+    box-shadow: inset 0px 0px 20px #0000006e;
+
 }
 
 .photoContainer{
@@ -143,13 +137,22 @@ margin: auto 2px auto 2px;
     width: 75%;
     margin: auto;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+}
+.welcomeHeader{
+    font-size: 100px;
+    margin: 0;
+}
+.welcomeSubTxt{
+    font-size: 25px;
 }
 
 .links{
     display: flex;
     justify-content: space-around;
     margin: auto;
+    width: fit-content;
+    text-align: left;
 }
 .link{
     margin: 12px 5px 12px 5px;
@@ -165,6 +168,7 @@ margin: auto 2px auto 2px;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+
 
 .down-bounce{
     animation-name: bounce-2;
@@ -217,7 +221,7 @@ margin: auto 2px auto 2px;
     margin: auto;
     padding: 17px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     text-align: center;
     transition: background 0.5s ease-in 0.1s;
@@ -280,11 +284,40 @@ margin: auto 2px auto 2px;
         margin: auto;
         padding: 17px;
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 700;
         display: flex;
         text-align: center;
         transition: background 0.5s ease-in 0.1s;
     }
+@media only screen and (max-width: 900px){
+    .greeting{
+        font-weight: 900;
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .welcomeHeader{
+        font-size: 100px;
+        margin: 0;
+    }
+    .welcomeSubTxt{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 500px){
+    /* .greeting{
+        font-weight: 900;
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    } */
+    .welcomeHeader{
+        font-size: 80px;
+        margin: 0;
+    }
+}
     .projectBlock{
         width: 95%;
         display: flex;

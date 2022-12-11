@@ -1,7 +1,11 @@
 import React from 'react'
 import "../main.css"
+import Resume from "../files/CJones_Resume.pdf"
 
 const Contact = ({lightMode}) => {
+    const openLink = (file) => {
+        window.open(file, "_blank")
+    }
     return(
         <>
             <div className='contact '>
@@ -23,6 +27,11 @@ const Contact = ({lightMode}) => {
                 </h1>
            
             </div>
+            <div className="links">
+                    <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://github.com/CRJones7")}>GH</div>
+                    <div className="link" onClick={() => openLink("https://www.linkedin.com/in/courtney-jones-458362b3/")} >LI</div>
+                    <div className="link" onClick={() => openLink(Resume)}>RE</div>
+                    </div>
         </>
     )
 }

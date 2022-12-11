@@ -26,7 +26,7 @@ const Projects = ({lightMode}) => {
     }
     
     return(
-        <>
+        <div>
         {/* {showModal && <Overlay image={img} setShow={setShowModal} show={showModal}/>} */}
         <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'}>Projects</div>
         <div className='projectBlock '>
@@ -41,7 +41,7 @@ const Projects = ({lightMode}) => {
         <div className='comingSoon'>
             More Coming Soon...
         </div>
-        </>
+        </div>
     )
 }
 
