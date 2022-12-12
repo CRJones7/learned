@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../main.css"
 import Charts from "../files/Charts.gif"
 import Formulary from "../files/Formulary.gif"
 import Overview from "../files/overview2.gif"
 import PChart from "../files/patientChart.gif"
 
-const Overlay = (image, setShow, show) => {
+// const Overlay = (image, setShow, show) => {
   
 
-  return(
-    <div className='modalOverlay'>
-      <div><img src={image === "charts" ? Charts : image === "overview" ? Overview : image === "pchart" ? PChart : Formulary} alt="largeImage"/></div>
-    </div>
-  )
-}
+//   return(
+//     <div className='modalOverlay'>
+//       <div><img src={image === "charts" ? Charts : image === "overview" ? Overview : image === "pchart" ? PChart : Formulary} alt="largeImage"/></div>
+//     </div>
+//   )
+// }
 
 const Projects = ({lightMode}) => {
 
-  const [showModal, setShowModal] = useState(false)
-  const [img, setImg] = useState(null)
+  // const [showModal, setShowModal] = useState(false)
+  // const [img, setImg] = useState(null)
 
     const handleClick = (img) => {
-      setShowModal(true)
-      setImg(img)
+      // setShowModal(true)
+      // setImg(img)
     }
     
     return(
-        <div>
+        <div className='projectsGroup'>
         {/* {showModal && <Overlay image={img} setShow={setShowModal} show={showModal}/>} */}
         <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'}>Projects</div>
         <div className='projectBlock '>

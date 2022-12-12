@@ -2,12 +2,12 @@ import React from 'react'
 import "../main.css"
 import Resume from "../files/CJones_Resume.pdf"
 
-const Contact = ({lightMode}) => {
+const Contact = ({lightMode, scrollWelcome}) => {
     const openLink = (file) => {
         window.open(file, "_blank")
     }
     return(
-        <>
+        <div className='contactGroup'>
             <div className='contact '>
                 <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Call me at:</div>
                 <h1 className='phone info'>(737)-346-1265</h1>
@@ -32,7 +32,12 @@ const Contact = ({lightMode}) => {
                     <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://www.linkedin.com/in/courtney-jones-458362b3/")} >LinkedIn</div>
                     <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink(Resume)}>Resume</div>
                     </div>
-        </>
+
+        {/* <div className="downArrow down-bounce" onClick={scrollWelcome}>
+                        <TriangleUpIcon size={64} className="down "/>
+                        Back To Top
+        </div> */}
+        </div>
     )
 }
 

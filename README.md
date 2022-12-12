@@ -1,4 +1,4 @@
-# Portfolio Attempt number XXX
+# Courtney Jones Portfolio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,6 +28,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy`
+
+To deploy to github Pages.
 
 ### `npm run eject`
 

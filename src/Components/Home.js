@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import "../main.css"
-
-import { MoonIcon, SunIcon, TriangleDownIcon} from "@primer/octicons-react"
+import { MoonIcon, SunIcon} from "@primer/octicons-react"
 import DarkLogo from "../images/logoDark.svg"
 import LightLogo from "../images/logoLight.svg"
 import Welcome from "./Welcome"
@@ -9,74 +8,56 @@ import About from "./About"
 import Contact from "./Contact"
 import Projects from "./Projects"
 
-const WELCOME = "Welcome"
-const ABOUT = "About"
-const CONTACT = "Contact"
-const PROJECTS = "Projects"
-
 const Home = () => {
     const [lightMode, setLightMode] = useState(false)
-    const [shown, setShown] = useState(WELCOME)
+
+    const contactRef = useRef(null)
+    const projectsRef = useRef(null)
+    const aboutRef = useRef(null)
+    const welcomeRef = useRef(null)
+
+    const scrollAbout = () => aboutRef.current.scrollIntoView({behavior: 'smooth', })
+    const scrollContact = () => contactRef.current.scrollIntoView({behavior: 'smooth'})
+    const scrollWelcome = () => welcomeRef.current.scrollIntoView({behavior: 'smooth'})
+    const scrollProjects = () => projectsRef.current.scrollIntoView({behavior: 'smooth'})
 
 
-    const handleChange = (screen, direction) => {
-    const screens = [WELCOME, PROJECTS, ABOUT, CONTACT]
-
-        const match = (el) => el === screen
-        const foundForward = screens.findIndex(match) + 1 
-        const foundClean = foundForward <= 3 ? foundForward : 0 
-        const newScreen = screens[foundClean]
-
-        setShown(newScreen)
-    }
-
-
-
+                                                        
     return(
     
         <div className={lightMode ? "home lightTheme" : "home darkTheme"}>
             <div className={lightMode ? "header lightHeader" : "header darkHeader"} >
-                <div className="logoBox" onClick={() =>  setShown(WELCOME)}>
+                <div className="logoBox" onClick={scrollWelcome}>
                    {!lightMode && <img src={LightLogo} className="mainLogo" alt="logo" />}
                    {lightMode && <img src={DarkLogo} className="mainLogo" alt="logo" />}
                 </div>
+                <div style={{display: "flex"}}>
                 <div className={lightMode ? "navs lightNavs" : "navs darkNavs"}>
-                    <div onClick={() => setShown(PROJECTS)} className="navItem">Projects |</div> 
-                    <div onClick={() => setShown(ABOUT)} className="navItem">About |</div> 
-                    <div onClick={() => setShown(CONTACT)}  className="navItem"> Contact </div> 
+                    <div onClick={scrollProjects} className="navItem">Projects |</div> 
+                    <div onClick={scrollAbout} className="navItem">About |</div> 
+                    <div onClick={scrollContact}  className="navItem"> Contact |</div> 
                 </div>
                 <div>
-                {!lightMode && <span onClick={() => setLightMode(!lightMode)}><SunIcon size={24} className="sun" /></span>}
-                {lightMode && <span onClick={() => setLightMode(!lightMode)}><MoonIcon size={24} className="moon" /></span>}
+                {!lightMode && <span onClick={() => setLightMode(!lightMode)} style={{marginLeft: '3px'}}><SunIcon size={24} className="sun" /></span>}
+                {lightMode && <span onClick={() => setLightMode(!lightMode)}  style={{marginLeft: '3px'}}><MoonIcon size={24} className="moon" /></span>}
+                </div>
                 </div>
             </div>
             
             <div className="welcome">
                 <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
-                    {shown === WELCOME && <Welcome lightMode={lightMode}/>}
-                    {shown === PROJECTS && <Projects lightMode={lightMode}/>}
-                    {shown === ABOUT && <About lightMode={lightMode}/>}
-                    {shown === CONTACT && <Contact lightMode={lightMode}/>}
-                    <div className="downArrow down-bounce" onClick={() => handleChange(shown, "down")}>
-                        <TriangleDownIcon size={64} className="down "/>
+                  
+                    <>
+                    <div ref={welcomeRef}><Welcome lightMode={lightMode} /></div>
+                    <div ref={projectsRef}><Projects lightMode={lightMode}/></div>
+                    <div ref={aboutRef}><About lightMode={lightMode}/></div>
+                    <div ref={contactRef}><Contact lightMode={lightMode} scrollWelcome={scrollWelcome}/></div>
+                    </>
+                
+                    <div className="downArrow down-bounce" >
+                        <span onClick={scrollWelcome} className={lightMode ? "toTop tagLight " : "toTop tagDark"}>Back To Top</span>
                     </div>
-                     {/* <Welcome lightMode={lightMode}/>
-                     <Projects lightMode={lightMode}/> 
-                   <About lightMode={lightMode}/>
-                     <Contact lightMode={lightMode}/>
-                     <div className="downArrow down-bounce" onClick={() => handleChange(shown, "down")}>
-                        <TriangleDownIcon size={64} className="down "/>
-                    </div> */}
                 </div> 
-                {/* <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
-                <Projects lightMode={lightMode}/>
-                </div>
-                <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
-                <About lightMode={lightMode}/>
-                </div>
-                <div className={lightMode ? "welcomeText lightWelcome": "welcomeText darkWelcome"}>
-                <Contact lightMode={lightMode}/>
-                </div> */}
             </div>
             
         </div>

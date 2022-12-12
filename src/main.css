@@ -117,6 +117,7 @@ margin: auto 2px auto 2px;
     margin: auto;
     margin-bottom: 5px;
     justify-content: center;
+    margin-top: 20px;
 }
 .photo{
     height: 200px;
@@ -136,8 +137,10 @@ margin: auto 2px auto 2px;
     font-weight: 900;
     width: 75%;
     margin: auto;
-    padding: 10px;
+    padding-top: 80px;
     text-align: left;
+    position: static;
+    height: 100vh;
 }
 .welcomeHeader{
     font-size: 100px;
@@ -171,13 +174,27 @@ margin: auto 2px auto 2px;
 .downArrow{
     margin: auto;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
 }
 
 
 .down-bounce{
     animation-name: bounce-2;
     animation-timing-function: ease;
+}
+
+.toTop{
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #00000042;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background 0.5s ease-in 0.1s;
 }
 
 @keyframes bounce-2 {
@@ -224,6 +241,7 @@ margin: auto 2px auto 2px;
     box-shadow: 0px 0px 20px #00000042;
     width: 60%;
     margin: auto;
+    margin-top: 20px;
     padding: 17px;
     font-size: 15px;
     font-weight: 700;
@@ -239,9 +257,21 @@ margin: auto 2px auto 2px;
     background-color:  #94c8a64c;
 }
 
+.projectsGroup{
+    position: static;
+    height: fit-content;
+    margin-bottom: 150px;
+}
+
+.contactGroup{
+    position: static;
+    height: 50vh;
+    margin-bottom: 150px;
+}
 
 .projectsTitle{
     margin: auto;
+    margin-top: 35px;
     margin-bottom: 5px;
     font-size: 25px;
     width: fit-content;
@@ -281,6 +311,12 @@ margin: auto 2px auto 2px;
     font-style: oblique;
     margin: 30px 0px 30px 0px
 }
+
+.aboutGroup{
+    position: static;
+    height: 100vh;
+    margin-bottom: 150px;
+}
 @media only screen and (max-width: 1189px){
     .aboutMe{
         border-radius: 5px;
@@ -301,6 +337,8 @@ margin: auto 2px auto 2px;
         margin: auto;
         padding: 10px;
         text-align: center;
+        position: unset;
+        bottom: 100px;
     }
     .welcomeHeader{
         font-size: 100px;
@@ -311,13 +349,6 @@ margin: auto 2px auto 2px;
     }
 }
 @media only screen and (max-width: 500px){
-    /* .greeting{
-        font-weight: 900;
-        width: 75%;
-        margin: auto;
-        padding: 10px;
-        text-align: center;
-    } */
     .welcomeHeader{
         font-size: 80px;
         margin: 0;
