@@ -80,6 +80,7 @@
 .navItem:hover{
     text-shadow: 1px 1px;
 }
+
 .welcome{
 height: 100vh;
 overflow: scroll;
@@ -136,16 +137,16 @@ margin: auto 2px auto 2px;
 .greeting{
     width: 75%;
     margin: auto;
-    padding-top: 80px;
+    padding-top: 160px;
     text-align: left;
     position: static;
     height: 100vh;
 }
 .welcomeHeader{
     font-size: 80px;
-    margin: 0;
+    margin: auto;
     font-weight: 900;
-
+    display: flex
 }
 .welcomeSubTxt{
     font-size: 25px;
@@ -312,9 +313,10 @@ margin: auto 2px auto 2px;
 
 .aboutGroup{
     position: static;
-    height: 75vh;
+    height: 80vh;
     margin-bottom: 150px;
 }
+
 @media only screen and (max-width: 1189px){
     .aboutMe{
         border-radius: 5px;
@@ -341,21 +343,24 @@ margin: auto 2px auto 2px;
     }
     .welcomeHeader{
     font-size: 80px;
-    margin: 0;
+    margin: auto;
     font-weight: 900;
-    padding-top: 60px
+    padding-top: 60px;
+    display: flex
     }
     .welcomeSubTxt{
         font-size: 23px;
         font-weight: lighter;
         
     }
+   
 }
 @media only screen and (max-width: 500px){
     .welcomeHeader{
         font-size: 60px;
-        margin: 0;
-        padding-top: 60px
+        margin: auto;
+        padding-top: 60px;
+        display: flex;
     }
     .welcomeSubTxt{
         font-size: 20px;
@@ -375,7 +380,23 @@ margin: auto 2px auto 2px;
     .toTopSmall{
         margin-bottom: 60px;
     }
+
+    @media only screen and (max-width: 380px){
+        .navs{
+            display: flex;
+            transition: color 0.5s color 0.1s;
+            font-size: 17px;
+        }
+        .welcomeHeader{
+            font-size: 50px;
+            margin: auto;
+            padding-top: 60px ;
+            display: flex
+        }
+    }
 }
+
+
     .projectBlock{
         width: 95%;
         display: flex;
@@ -400,7 +421,12 @@ margin: auto 2px auto 2px;
         font-style: oblique;
         margin: 15px 0px 15px 0px
     }
+    
+
 }
+
+
+
 
 .modalOverlay {
     position: fixed;
