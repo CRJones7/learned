@@ -3,11 +3,11 @@ import React from 'react'
 const Welcome = ({lightMode}) => {
 
     return(
-        <div style={{height: "100vh"}}>
+        <div style={{height: "80vh"}}>
                     <div className="greeting">
-                        <h3 className='welcomeHeader'>Hi, I'm</h3>
-                        <h4  className='welcomeHeader'>Courtney Jones</h4>
-                        <p className='welcomeSubTxt'>The Front-End Developer</p>
+                        <h3 className='welcomeHeader'>Hi, I'm Courtney</h3>
+                        {/* <h4  className='welcomeHeader'>—</h4> */}
+                        <p className='welcomeSubTxt'>A front-end developer based in Austin, TX <br/> building telemedicine solutions.</p>
                     </div>
         </div>
     )

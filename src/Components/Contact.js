@@ -7,6 +7,7 @@ const Contact = ({lightMode, scrollWelcome}) => {
         window.open(file, "_blank")
     }
     return(
+        <>
         <div className='contactGroup'>
             <div className='contact '>
                 <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Call me at:</div>
@@ -32,12 +33,10 @@ const Contact = ({lightMode, scrollWelcome}) => {
                     <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink("https://www.linkedin.com/in/courtney-jones-458362b3/")} >LinkedIn</div>
                     <div className={lightMode ?  "link tagLight": "link tagDark"} onClick={() => openLink(Resume)}>Resume</div>
                     </div>
-
-        {/* <div className="downArrow down-bounce" onClick={scrollWelcome}>
-                        <TriangleUpIcon size={64} className="down "/>
-                        Back To Top
-        </div> */}
+                    
         </div>
+        
+    </>
     )
 }
 

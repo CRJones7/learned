@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .home{
     height: 100vh;
     width: 100%;
-    font-family: "Oswald";
+    font-family: "Montserrat";
     /* font-family: 'Courier New', Courier, monospace;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     transition: background-color 0.5s ease-in 0.1s;
@@ -134,7 +134,6 @@ margin: auto 2px auto 2px;
 }
 
 .greeting{
-    font-weight: 900;
     width: 75%;
     margin: auto;
     padding-top: 80px;
@@ -143,11 +142,14 @@ margin: auto 2px auto 2px;
     height: 100vh;
 }
 .welcomeHeader{
-    font-size: 100px;
+    font-size: 80px;
     margin: 0;
+    font-weight: 900;
+
 }
 .welcomeSubTxt{
     font-size: 25px;
+    font-weight: lighter;
 }
 
 .links{
@@ -195,6 +197,8 @@ margin: auto 2px auto 2px;
     font-weight: 600;
     text-transform: uppercase;
     transition: background 0.5s ease-in 0.1s;
+    cursor: pointer;
+    margin: 0 15px 15px 0;
 }
 
 @keyframes bounce-2 {
@@ -238,7 +242,7 @@ margin: auto 2px auto 2px;
 
 .aboutMe{
     border-radius: 5px;
-    box-shadow: 0px 0px 20px #00000042;
+    /* box-shadow: 0px 0px 20px #00000042; */
     width: 60%;
     margin: auto;
     margin-top: 20px;
@@ -247,14 +251,8 @@ margin: auto 2px auto 2px;
     font-weight: 700;
     display: flex;
     text-align: center;
-    transition: background 0.5s ease-in 0.1s;
-}
-
-.tagLight{
-    background-color: #092a3a5c;
-}
-.tagDark{
-    background-color:  #94c8a64c;
+    line-height: 1.5;
+    /* transition: background 0.5s ease-in 0.1s; */
 }
 
 .projectsGroup{
@@ -277,10 +275,10 @@ margin: auto 2px auto 2px;
     width: fit-content;
     padding: 5px 15px;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px #00000042;
+    /* box-shadow: 0px 0px 20px #00000042; */
     font-weight: 600;
     text-transform: uppercase;
-    transition: background 0.5s ease-in 0.1s;
+    /* transition: background 0.5s ease-in 0.1s; */
 }
 
 .projectBlock{
@@ -314,13 +312,13 @@ margin: auto 2px auto 2px;
 
 .aboutGroup{
     position: static;
-    height: 100vh;
+    height: 75vh;
     margin-bottom: 150px;
 }
 @media only screen and (max-width: 1189px){
     .aboutMe{
         border-radius: 5px;
-        box-shadow: 0px 0px 20px #00000042;
+        /* box-shadow: 0px 0px 20px #00000042; */
         width: 80%;
         margin: auto;
         padding: 17px;
@@ -328,11 +326,12 @@ margin: auto 2px auto 2px;
         font-weight: 700;
         display: flex;
         text-align: center;
-        transition: background 0.5s ease-in 0.1s;
+        line-height: 1.5;
+        /* transition: background 0.5s ease-in 0.1s; */
     }
 @media only screen and (max-width: 900px){
     .greeting{
-        font-weight: 900;
+        
         width: 75%;
         margin: auto;
         padding: 10px;
@@ -341,17 +340,40 @@ margin: auto 2px auto 2px;
         bottom: 100px;
     }
     .welcomeHeader{
-        font-size: 100px;
-        margin: 0;
+    font-size: 80px;
+    margin: 0;
+    font-weight: 900;
+    padding-top: 60px
     }
     .welcomeSubTxt{
-        font-size: 25px;
+        font-size: 23px;
+        font-weight: lighter;
+        
     }
 }
 @media only screen and (max-width: 500px){
     .welcomeHeader{
-        font-size: 80px;
+        font-size: 60px;
         margin: 0;
+        padding-top: 60px
+    }
+    .welcomeSubTxt{
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    .contactTag{
+    
+        width: fit-content;
+        padding: 5px 15px;
+        border-radius: 1px;
+        box-shadow: 0px 0px 20px #00000042;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: background 0.5s ease-in 0.1s;
+        font-size: 15px;
+    }
+    .toTopSmall{
+        margin-bottom: 60px;
     }
 }
     .projectBlock{

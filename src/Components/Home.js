@@ -55,8 +55,8 @@ const Home = () => {
                     </>
                 
                     <div className="downArrow down-bounce" >
-                        <span onClick={scrollWelcome} className={lightMode ? "toTop tagLight " : "toTop tagDark"}>Back To Top</span>
-                    </div>
+        <span onClick={scrollWelcome} className={lightMode ? "toTop tagLight toTopSmall" : "toTop tagDark toTopSmall"}>Back To Top</span>
+    </div>
                 </div> 
             </div>
             
