@@ -10,15 +10,15 @@ const Contact = ({lightMode, scrollWelcome}) => {
         <>
         <div className='contactGroup'>
             <div className='contact '>
-                <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Call me at:</div>
+                <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Call me:</div>
                 <h1 className='phone info'>(737)-346-1265</h1>
             </div>
             <div className='contact'>
-               <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Find me in:</div> 
+               <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Find me:</div> 
                <h1 className='location info'>Austin, TX</h1>
             </div>
             <div className='contact'>
-                <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Message me at: </div>
+                <div className={lightMode ? 'contactTag tagLight' : 'contactTag tagDark'}>Message me: </div>
                 <h1 className='email info'
                 onClick={(e) => {
                     window.location = "mailto:courtneyrjones95@gmail.com";

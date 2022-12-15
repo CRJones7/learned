@@ -6,7 +6,6 @@ const Welcome = ({lightMode}) => {
         <div style={{height: "80vh"}}>
                     <div className="greeting">
                         <h3 className='welcomeHeader'>Hi, I'm Courtney</h3>
-                        {/* <h4  className='welcomeHeader'>—</h4> */}
                         <p className='welcomeSubTxt'>A front-end developer based in Austin, TX <br/> building telemedicine solutions.</p>
                     </div>
         </div>
