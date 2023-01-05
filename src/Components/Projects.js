@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "../main.css"
 import Charts from "../files/Charts.gif"
 import Formulary from "../files/Formulary.gif"
 import Overview from "../files/overview2.gif"
 import PChart from "../files/patientChart.gif"
+import CarShow from "../images/carShow.png"
+import { ChevronDownIcon, ChevronUpIcon } from '@primer/octicons-react'
 
 // const Overlay = (image, setShow, show) => {
   
@@ -16,7 +18,7 @@ import PChart from "../files/patientChart.gif"
 // }
 
 const Projects = ({lightMode}) => {
-
+const [showPersonal, setShowPersonal] = useState(false)
   // const [showModal, setShowModal] = useState(false)
   // const [img, setImg] = useState(null)
 
@@ -28,7 +30,7 @@ const Projects = ({lightMode}) => {
     return(
         <div className='projectsGroup'>
         {/* {showModal && <Overlay image={img} setShow={setShowModal} show={showModal}/>} */}
-        <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'}>Projects</div>
+        <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'}>Professional Projects</div>
         <div className='projectBlock '>
         <img src={Charts} alt="Charts Gif" className='projectGif project' onClick={() => handleClick("charts")}/>
           <img src={Formulary} alt="Table Gif" className='projectGif project' onClick={() => handleClick("formulary")}/>
@@ -38,9 +40,18 @@ const Projects = ({lightMode}) => {
           <img src={PChart} alt="Table Gif" className='projectGif project' onClick={() => handleClick("pchart")}/>
           <img src={Overview} alt="Overview Gif" className='projectGif project' onClick={() => handleClick("overview")}/>
         </div>
-        <div className='comingSoon'>
-            More Coming Soon...
+        <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'} onClick={() => setShowPersonal(!showPersonal)}>Personal Projects {!showPersonal ? <span className='chev'><ChevronDownIcon  size={30}/></span> : <span className='chev' ><ChevronUpIcon size={30} /></span>} </div>
+        {showPersonal && 
+        <>
+        <div className='projectBlock '>
+          <img src={CarShow} alt="React Three Fiber - Car Show" className='projectGif project personalProject' onClick={() => window.open('https://crjones7.github.io/car_show/', '_blank')}/>
         </div>
+        <div className='comingSoon'>
+        More Coming Soon...
+        </div>
+        </>
+        }
+        
         </div>
     )
 }
