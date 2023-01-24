@@ -5,6 +5,7 @@ import Formulary from "../files/Formulary.gif"
 import Overview from "../files/overview2.gif"
 import PChart from "../files/patientChart.gif"
 import CarShow from "../images/carShow.png"
+import MathyMath from "../images/mathyMath.png"
 import { ChevronDownIcon, ChevronUpIcon } from '@primer/octicons-react'
 
 // const Overlay = (image, setShow, show) => {
@@ -40,17 +41,24 @@ const [showPersonal, setShowPersonal] = useState(false)
           <img src={PChart} alt="Table Gif" className='projectGif project' onClick={() => handleClick("pchart")}/>
           <img src={Overview} alt="Overview Gif" className='projectGif project' onClick={() => handleClick("overview")}/>
         </div>
-        <div className={lightMode ? 'projectsTitle tagLight' : 'projectsTitle tagDark'} onClick={() => setShowPersonal(!showPersonal)}>Personal Projects {!showPersonal ? <span className='chev'><ChevronDownIcon  size={30}/></span> : <span className='chev' ><ChevronUpIcon size={30} /></span>} </div>
-        {showPersonal && 
-        <>
+        <div className={lightMode ? 'projectsTitle tagLight personal' : 'projectsTitle tagDark personal'} onClick={() => setShowPersonal(!showPersonal)}>Personal Projects </div>
+        {/* {showPersonal && 
+        <> */}
         <div className='projectBlock '>
-          <img src={CarShow} alt="React Three Fiber - Car Show" className='projectGif project personalProject' onClick={() => window.open('https://crjones7.github.io/car_show/', '_blank')}/>
+          <div className='chunks projectGif '>
+          <img src={CarShow} alt="React Three Fiber - Car Show" className='project personalProject' onClick={() => window.open('https://crjones7.github.io/car_show/', '_blank')}/>
+          <span>React Three Fiber Project</span>
+          </div>
+          <div className='chunks projectGif '>
+          <img src={MathyMath} alt="Math Practice Site" className='project personalProject' onClick={() => window.open('https://crjones7.github.io/mathymath', '_blank')}/>
+          <span>Kids Math Practice</span>
+          </div>
         </div>
         <div className='comingSoon'>
         More Coming Soon...
         </div>
-        </>
-        }
+        {/* </>
+        } */}
         
         </div>
     )

@@ -303,6 +303,7 @@ margin: auto 2px auto 2px;
 }
 .personalProject{
     cursor: pointer;
+    height: 100%;
 }
 .project{
     box-shadow: 0px 0px 20px #00000042;
@@ -426,11 +427,11 @@ margin: auto 2px auto 2px;
         font-size: 20px;
     }
     .comingSoon{
-        width: 100%;
+        width: 94%;
         text-align: center;
         font-weight: 700;
         font-style: oblique;
-        margin: 15px 0px 15px 0px
+        margin: 30px 0px 30px 0px
     }
     
 
@@ -452,6 +453,11 @@ margin: auto 2px auto 2px;
     width: 100%;
     cursor: zoom-in;
   }
+.chunks{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
     
 
