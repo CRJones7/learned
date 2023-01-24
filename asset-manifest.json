@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.470f3a9c.css",
-    "main.js": "/static/js/main.b9abe462.js",
+    "main.css": "/static/css/main.c1f03edd.css",
+    "main.js": "/static/js/main.fddfaf4e.js",
     "static/js/787.6761af09.chunk.js": "/static/js/787.6761af09.chunk.js",
     "static/media/Formulary.gif": "/static/media/Formulary.906a06c7d8077dfa9689.gif",
     "static/media/patientChart.gif": "/static/media/patientChart.9d5743f8a2fade6001eb.gif",
@@ -10,15 +10,16 @@
     "static/media/carShow.png": "/static/media/carShow.730207b0ffc4a9de61a0.png",
     "static/media/mePhoto.jpeg": "/static/media/mePhoto.b637a9095c75a1663ffd.jpeg",
     "static/media/CJones_Resume.pdf": "/static/media/CJones_Resume.2cda2325797a4bcac947.pdf",
+    "static/media/mathyMath.png": "/static/media/mathyMath.1f9a7089aef136d7d9a7.png",
     "static/media/logoLight.svg": "/static/media/logoLight.1b728a065529f857a9a23f9f21c1d4d2.svg",
     "static/media/logoDark.svg": "/static/media/logoDark.6248805730c784a4f7123c98641ad774.svg",
     "index.html": "/index.html",
-    "main.470f3a9c.css.map": "/static/css/main.470f3a9c.css.map",
-    "main.b9abe462.js.map": "/static/js/main.b9abe462.js.map",
+    "main.c1f03edd.css.map": "/static/css/main.c1f03edd.css.map",
+    "main.fddfaf4e.js.map": "/static/js/main.fddfaf4e.js.map",
     "787.6761af09.chunk.js.map": "/static/js/787.6761af09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.470f3a9c.css",
-    "static/js/main.b9abe462.js"
+    "static/css/main.c1f03edd.css",
+    "static/js/main.fddfaf4e.js"
   ]
 }
