@@ -1,6 +1,6 @@
 import React from 'react'
 import "../main.css"
-import Resume from "../files/CJones_Resume.pdf"
+import Resume from "../files/CjonesResume.pdf"
 
 const Contact = ({lightMode, scrollWelcome}) => {
     const openLink = (file) => {
