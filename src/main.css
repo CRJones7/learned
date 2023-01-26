@@ -104,11 +104,11 @@ margin: auto 2px auto 2px;
     height: 100vh;
 }
 .lightWelcome{
-    box-shadow: inset 0px 0px 20px #00000042;
+    /* box-shadow: inset 0px 0px 20px #00000042; */
   
 }
 .darkWelcome{
-    box-shadow: inset 0px 0px 20px #0000006e;
+    /* box-shadow: inset 0px 0px 20px #0000006e; */
 
 }
 
@@ -135,7 +135,7 @@ margin: auto 2px auto 2px;
 }
 
 .greeting{
-    width: 75%;
+    width: 90%;
     margin: auto;
     padding-top: 160px;
     text-align: left;
@@ -257,13 +257,13 @@ margin: auto 2px auto 2px;
 }
 
 .projectsGroup{
-    position: static;
+    /* position: static; */
     height: fit-content;
     margin-bottom: 150px;
 }
 
 .contactGroup{
-    position: static;
+    /* position: static; */
     height: 50vh;
     margin-bottom: 150px;
 }
@@ -320,8 +320,8 @@ margin: auto 2px auto 2px;
 }
 
 .aboutGroup{
-    position: static;
-    height: 80vh;
+    /* position: static; */
+    height: 90vh;
     margin-bottom: 150px;
 }
 
@@ -390,6 +390,12 @@ margin: auto 2px auto 2px;
     }
     .projectsTitle{
         font-size: 20px;
+    }
+    .aboutGroup{
+        /* position: static; */
+        height: 100vh;
+        margin-bottom: 370px;
+        display: block;
     }
 
     @media only screen and (max-width: 380px){
