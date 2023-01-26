@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useCallback} from "react"
 import './App.css';
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import "../src/Components/main.css"
@@ -18,8 +18,8 @@ function App() {
     <div className="home">
     <div className={lightMode ? "header lightHeader" : "header darkHeader"} >
                 <Link className="logoBox" to="/">
-                   {!lightMode && <img src={LightLogo} className="mainLogo" alt="logo" />}
-                   {lightMode && <img src={DarkLogo} className="mainLogo" alt="logo" />}
+                   {!lightMode && <img src={LightLogo} className="mainLogo" alt="logo" loading="lazy"/>}
+                   {lightMode && <img src={DarkLogo} className="mainLogo" alt="logo" loading="lazy"/>}
                 </Link>
                 <div className={lightMode ? "navs lightNavs" : "navs darkNavs"}>
                     <Link to="/about" className="navItem">About |</Link> 
@@ -27,8 +27,8 @@ function App() {
                     <Link  to="/projects" className="navItem">Projects</Link> 
                 </div>
                 <div>
-                {!lightMode && <span onClick={() => setLightMode(!lightMode)}><SunIcon size={24} className="sun" /></span>}
-                {lightMode && <span onClick={() => setLightMode(!lightMode)}><MoonIcon size={24} className="moon" /></span>}
+                {!lightMode && <span onClick={() => setLightMode(!lightMode)}><SunIcon size={24} className="sun" loading="lazy"/></span>}
+                {lightMode && <span onClick={() => setLightMode(!lightMode)}><MoonIcon size={24} className="moon" loading="lazy"/></span>}
                 </div>
             </div>
         <Routes>
